@@ -1,0 +1,41 @@
+# VARIABLES
+@baseUrl = http://localhost:3333
+
+# Health check
+GET {{baseUrl}}/health
+
+###
+
+# GET ROOMS
+GET {{baseUrl}}/rooms
+
+###
+
+# Create Room 
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+  "name": "Sala de teste",
+  "description": "testando a criação de rotas"
+}
+###
+# o id de uma sala para fazer pesquisa. 
+@roomId = 111179ed-6778-47da-3cb9-f8813aabe33b
+###
+
+#Get Question for Room 
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+###
+
+# Create Question from Room
+
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+Content-Type: application/json
+
+{
+  "question": "O que é typeScript?"
+}
+
+###
