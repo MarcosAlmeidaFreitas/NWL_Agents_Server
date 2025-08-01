@@ -31,11 +31,11 @@ GET {{baseUrl}}/rooms/{{roomId}}/questions
 
 # Create Question from Room
 
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/6b70810c-74ff-4ce9-2665-dbe392f0610b/questions
 Content-Type: application/json
 
 {
-  "question": "O que é typeScript?"
+  "question": "O que é React?"
 }
 
 ###
